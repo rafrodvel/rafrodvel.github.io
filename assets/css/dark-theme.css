@@ -1,0 +1,280 @@
+/*
+ * dark-theme.css
+ * Dark theme overrides for the Read Only template.
+ * Accent colour: #4acaa8 (teal) — kept as-is, looks great on dark.
+ */
+
+/* ── Palette variables (easy to tweak) ─────────────────────────────────────
+   --bg-deep   : darkest background (main page body)
+   --bg-mid    : slightly lighter (sections, cards)
+   --bg-surface: inputs, tables, footer
+   --text-main : primary text
+   --text-muted: secondary / placeholder text
+   --border    : dividers
+   --accent    : teal highlight (unchanged from template)
+   ────────────────────────────────────────────────────────────────────────── */
+
+/* ── Simulation card images — uniform size ───────────────────────────────── */
+.features article .image {
+    overflow: hidden;        /* clip anything outside the box */
+}
+
+.features article .image img {
+    height: 220px;           /* fixed height — adjust to taste */
+    width: 100%;
+    object-fit: cover;       /* crop to fill, no stretching */
+    object-position: center; /* crop from the centre */
+    display: block;
+}
+
+/* ── Paragraph spacing ───────────────────────────────────────────────────── */
+#main p {
+    margin-bottom: 1em;   /* default is ~2.25em — reduce to taste */
+}
+body {
+    background: #0f1117;
+    color: #c9d1d9;
+}
+
+body, input, select, textarea {
+    color: #c9d1d9;
+}
+
+/* ── Headings ────────────────────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+    color: #e6edf3;
+}
+
+/* Section headings (Simulations, Teaching, etc.) — restore teal */
+header.major h2,
+header.major h3 {
+    color: #4acaa8;
+}
+
+/* Subtitle under section heading ("PhD Student in Physics…") */
+header.major h2 + p,
+header.major h3 + p {
+    color: #8b949e;
+}
+
+/* ── Links ───────────────────────────────────────────────────────────────── */
+a {
+    color: #4acaa8;
+}
+a:hover {
+    color: #7ddfc9;
+}
+
+/* ── Horizontal rules & blockquotes ─────────────────────────────────────── */
+hr {
+    border-bottom-color: #30363d;
+}
+blockquote {
+    border-left-color: #30363d;
+}
+
+/* ── Code blocks ─────────────────────────────────────────────────────────── */
+code {
+    background: #161b22;
+    color: #79c0ff;
+}
+pre {
+    background: #161b22;
+    color: #c9d1d9;
+}
+
+/* ── Sidebar / Header panel ──────────────────────────────────────────────── */
+#header {
+    background: #161b22;          /* dark navy instead of teal */
+    color: #c9d1d9;
+}
+
+#header h1, #header h2, #header h3,
+#header h4, #header h5, #header h6 {
+    color: #4acaa8;
+}
+
+#header h1 a, #header h2 a, #header h3 a,
+#header h4 a, #header h5 a, #header h6 a {
+    color: #4acaa8;
+}
+
+#header > header p,
+#header header p {
+    color: #8b949e;
+}
+
+#header a {
+    color: #c9d1d9;
+}
+#header a:hover {
+    color: #ffffff !important;
+}
+
+/* Nav links */
+#header > nav ul li {
+    border-top-color: #21262d;
+}
+
+#header > nav ul li a {
+    color: #c9d1d9 !important;
+}
+
+#header > nav ul li a.active {
+    background: #0f1117;
+    color: #4acaa8 !important;
+}
+
+/* Social icons in sidebar footer */
+#header > footer .icons li a {
+    color: #8b949e;
+}
+#header > footer .icons li a:hover {
+    color: #ffffff !important;
+}
+
+/* Mobile title bar */
+#titleBar {
+    background: #161b22;
+    color: #e6edf3;
+}
+#titleBar .title {
+    color: #e6edf3;
+}
+
+/* ── Main content wrapper ────────────────────────────────────────────────── */
+#wrapper {
+    background: #0f1117;
+}
+
+/* Section dividers */
+#main > section {
+    border-top-color: #21262d;
+}
+
+/* ── Feature icons ───────────────────────────────────────────────────────── */
+ul.feature-icons li:before {
+    background: #4acaa8;  /* keep teal circle */
+    color: #0f1117;       /* dark glyph — matches the CV button style */
+}
+
+/* fa-atom sits slightly high — nudge it down */
+ul.feature-icons li.fa-atom:before {
+    padding-top: 0.085em;
+}
+
+/* ── Bold / strong text ──────────────────────────────────────────────────── */
+strong, b {
+    color: #4acaa8;   /* teal — stands out on dark, matches accent */
+    font-weight: 700;
+}
+
+/* ── Project / article cards ─────────────────────────────────────────────── */
+.features article {
+    border-top-color: #21262d;
+}
+
+/* ── Tables ──────────────────────────────────────────────────────────────── */
+table {
+    color: #c9d1d9;
+}
+
+table tbody tr {
+    border-color: #21262d;
+}
+
+table tbody tr:nth-child(2n+1) {
+    background-color: #161b22;
+}
+
+table th {
+    color: #e6edf3;
+    border-bottom-color: #30363d;
+}
+
+table td {
+    border-top-color: #21262d;
+}
+
+/* ── Forms (inputs, textareas) ───────────────────────────────────────────── */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+select,
+textarea {
+    background: #161b22;
+    border-color: #30363d;
+    color: #c9d1d9;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #4acaa8;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+    color: #484f58;
+}
+
+/* ── Buttons ─────────────────────────────────────────────────────────────── */
+/* Default (grey) button */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.button {
+    background-color: #21262d;
+    border-color: #30363d;
+    color: #c9d1d9 !important;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:hover {
+    background-color: #30363d;
+    border-color: #4acaa8;
+}
+
+/* Primary (teal) button — keep accent colour */
+input[type="submit"].primary,
+.button.primary {
+    background-color: #4acaa8;
+    border-color: #4acaa8;
+    color: #0f1117 !important;
+}
+
+input[type="submit"].primary:hover,
+.button.primary:hover {
+    background-color: #3ab898;
+    border-color: #3ab898;
+}
+
+/* ── Footer ──────────────────────────────────────────────────────────────── */
+#footer {
+    background: #161b22;
+    border-top-color: #21262d;
+    color: #484f58;
+}
+
+#footer .copyright li {
+    border-left-color: #21262d;
+}
+
+/* ── Academicons — match sidebar icon style ──────────────────────────────── */
+#header > footer .icons li a.ai {
+    font-size: 1.25em;
+    color: #8b949e;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+}
+#header > footer .icons li a.ai:hover {
+    color: #ffffff !important;
+}
+#header > footer .icons li a.ai .label {
+    display: none;
+}

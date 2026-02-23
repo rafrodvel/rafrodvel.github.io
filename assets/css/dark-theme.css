@@ -16,15 +16,16 @@
 
 /* ── Simulation card images — uniform size ───────────────────────────────── */
 .features article .image {
-    overflow: hidden;        /* clip anything outside the box */
+    overflow: hidden;
 }
 
 .features article .image img {
-    height: 220px;           /* fixed height — adjust to taste */
     width: 100%;
-    object-fit: cover;       /* crop to fill, no stretching */
-    object-position: center; /* crop from the centre */
+    aspect-ratio: 4 / 3;    /* consistent ratio on any screen width */
+    object-fit: cover;
+    object-position: center;
     display: block;
+    height: auto;
 }
 
 /* ── Paragraph spacing ───────────────────────────────────────────────────── */
